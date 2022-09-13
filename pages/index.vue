@@ -9,6 +9,20 @@
         </h1>
         <div class="flex items-center justify-end p-4 space-x-2">
           <NuxtLink
+            to="/blog"
+            target="_blank"
+            class="p-1 text-primary-200 hover:text-primary-400"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="text-yellow-400  h-16 w-16" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21
+                     12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          </NuxtLink>
+          <NuxtLink
             to="https://github.com/bryantgillespie/nuxt3-directus-starter"
             target="_blank"
             class="p-1 text-primary-200 hover:text-primary-400"

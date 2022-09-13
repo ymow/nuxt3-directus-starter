@@ -25,7 +25,7 @@
     },
     "dependencies": {
         "@directus/sdk": "^10.1.4",
-        "@headlessui/vue": "^1.6.7",
+        "@headlessui/vue": "^1.7.1",
         "@heroicons/vue": "^1.0.6",
         "pinia": "^2.0.18"
     }
