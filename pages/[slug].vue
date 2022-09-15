@@ -2,7 +2,7 @@
   <div class="max-w-3xl px-6 py-12 mx-auto space-y-8">
     <NuxtLink
       class="flex items-center font-bold text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
-      to="/"
+      to="/blog"
     >
       <span class="mr-2 text-xl">←</span>
       Back to Home Page
@@ -11,7 +11,7 @@
     <div class="relative pt-48 pb-10 overflow-hidden shadow-xl rounded-2xl">
       <img
         class="absolute inset-0 object-cover w-full h-full"
-        :src="`${$config.directusUrl}/assets/${page.image}`"
+        :src="`${$config.directusUrl}/assets/${page.cover_image}`"
       />
       <div class="absolute inset-0 bg-primary-500 mix-blend-multiply" />
       <div
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="prose dark:prose-invert" v-html="page.content" />
+    <div class="prose dark:prose-invert" v-html="page.body" />
   </div>
 </template>
 
@@ -44,12 +44,12 @@ const {
   path,
   () => {
     return $directus
-      .items('pages')
-      .readByQuery({ filter: { slug: { _eq: params.slug } }, limit: 1 })
+      .items('articles')
+      .readByQuery({ filter: { id: { _eq: params.slug } }, limit: 1 })
   },
   {
     transform: (data) => data.data[0],
-    pick: ['title', 'content', 'image'],
+    pick: ['title', 'body', 'cover_image'],
   }
 )
 

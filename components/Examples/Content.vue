@@ -58,7 +58,7 @@ const loading = ref(false)
 async function fetchPages() {
   loading.value = true
   try {
-    const { data } = await $directus.items('pages').readByQuery({
+    const { data } = await $directus.items('articles').readByQuery({
       filter: {
         status: { _eq: 'published' },
       },

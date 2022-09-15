@@ -27,6 +27,7 @@
         "@directus/sdk": "^10.1.4",
         "@headlessui/vue": "^1.7.1",
         "@heroicons/vue": "^1.0.6",
+        "nuxt-directus": "^3.0.3",
         "pinia": "^2.0.18"
     }
 }
