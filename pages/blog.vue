@@ -28,9 +28,6 @@
       <div class="w-full h-4 bg-gradient-to-r from-primary-700 via-primary-600 to-pink-600" />
     </header>
     <div class="">
-      <!-- <p class="text-primary-600">{{categories}}</p>
-      <br>
-      <p class="text-primary-600">{{pages}}</p> -->
       <TabGroup>
         <TabList class="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
           <Tab v-for="category in pages" as="template" :key="category" v-slot="{ selected }">
@@ -145,7 +142,7 @@ const loading = ref(false)
 
 async function fetchPages() {
   // loading.value = true
-  // try {
+  try {
   const { data } = await $directus.items('news_categories').readByQuery({
     fields: ["*", "articles.id", "articles.title", "articles.author.avatar", "articles.author.last_name", "articles.cover_image"],
     filter: {
@@ -154,10 +151,11 @@ async function fetchPages() {
     limit: 5,
   })
   pages.value = data
-  // } catch (e) {
-  // console.error(e)
-  // } finally {
-  // loading.value = false
+  } catch (e) {
+  console.error(e)
+  } finally {
+  loading.value = false
+  }
 }
 
 fetchPages()
