@@ -2,9 +2,9 @@ Nuxt 3 / Directus Starter /
 
 
 Project from 
-[nuxt3-directus-starter](https://github.com/bryantgillespie/nuxt3-directus-starter)
+[nuxt3-directus-starter as frontend](https://github.com/bryantgillespie/nuxt3-directus-starter)
 and
-[Directus](https://github.com/directus/examples/tree/main/directus)
+[Directus as Backend](https://github.com/directus/examples/tree/main/directus)
 and
 [Tailwind headlessUI](https://headlessui.com/vue/tabs)
 
