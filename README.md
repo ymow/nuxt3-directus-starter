@@ -1,3 +1,12 @@
+Nuxt 3 / Directus Starter / 
+
+Project from 
+https://github.com/bryantgillespie/nuxt3-directus-starter
+and
+https://github.com/directus/examples/tree/main/directus
+
+
+
 # Nuxt 3 / Directus Starter
 
 **⚠️ STILL WORK IN PROGRESS - COULD CHANGE DAILY ⚠️**
